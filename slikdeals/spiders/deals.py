@@ -29,7 +29,7 @@ class DealsSpider(scrapy.Spider):
 
         # driver.save_screenshot("test.png")
         # driver.close()
-        next_page = response.xpath("//*[@id='fpMainContent']/div[6]/a[position() = last()]/@href").get
+        next_page = response.xpath("//*[@id='fpMainContent']/div[6]/a[position() = last()]/@href").get()
 
         if next_page:
             next_page_url = response.urljoin(next_page)
